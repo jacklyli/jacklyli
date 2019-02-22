@@ -1,154 +1,164 @@
-
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Jacklyli </title>
-<meta name="description" content="自己的心情记录">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
 <link rel="shortcut icon" href="https://jacklyli.github.io//favicon.ico">
 <link rel="stylesheet" href="https://jacklyli.github.io//styles/main.css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://jacklyli.github.io/">
-        <img class="avatar" src="https://jacklyli.github.io//images/avatar.png" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://jacklyli.github.io/">
-        <h1 class="site-title">Jacklyli </h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://jacklyli.github.io/">
+  <img class="avatar" src="https://jacklyli.github.io//images/avatar.png" alt="" width="80px" height="80px">
+  </a>
+  <h1 class="site-title">
+    Jacklyli 
+  </h1>
+  <p class="site-description">
+    自己的心情记录
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://jacklyli.github.io/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://jacklyli.github.io//archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="https://jacklyli.github.io//tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="https://jacklyli.github.io//post/xiao-bai-de-di-yi-pian/" class="menu">
+          关于
+        </a>
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
+    
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://jacklyli.github.io//post/chu-li-excel-wen-jian">
+        <h2 class="post-title">处理Excel文件</h2>
+      </a>
+      <div class="post-info">
+        <time class="post-time">
+          · 2019-02-17 ·
+        </time>
         
-          <a href="/" class="menu purple-link">
-            首页
+          <a href="https://jacklyli.github.io//tag/uWdYyQrN-" class="post-tag">
+            # Python
           </a>
         
+      </div>
       
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
+        <a href="https://jacklyli.github.io//post/chu-li-excel-wen-jian" class="post-feature-image" style="background-image: url('https://jacklyli.github.io//post-images/chu-li-excel-wen-jian.jpg')">
+        </a>
       
+      <div class="post-abstract">
         
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://jacklyli.github.io//post/chang-yong-de-shu-ju-chu-li-han-shu">
+        <h2 class="post-title">常用的数据处理函数</h2>
+      </a>
+      <div class="post-info">
+        <time class="post-time">
+          · 2019-02-15 ·
+        </time>
         
+      </div>
       
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
+        <a href="https://jacklyli.github.io//post/chang-yong-de-shu-ju-chu-li-han-shu" class="post-feature-image" style="background-image: url('https://jacklyli.github.io//post-images/chang-yong-de-shu-ju-chu-li-han-shu.jpg')">
+        </a>
       
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
+      <div class="post-abstract">
         
-        
-<section class="post-item">
-    <div class="content">
+      </di>
+    </article>
+  
+    <article class="post">
       <a href="https://jacklyli.github.io//post/he-he-hua-hua">
         <h2 class="post-title">和和画画</h2>
       </a>
+      <div class="post-info">
+        <time class="post-time">
+          · 2019-02-13 ·
+        </time>
+        
+          <a href="https://jacklyli.github.io//tag/0mztBzF_u" class="post-tag">
+            # 和和媛媛成长记录
+          </a>
+        
+      </div>
+      
+        <a href="https://jacklyli.github.io//post/he-he-hua-hua" class="post-feature-image" style="background-image: url('https://jacklyli.github.io//post-images/he-he-hua-hua.jpg')">
+        </a>
+      
       <div class="post-abstract">
         
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-02-22</span>
-        
-      </div>
-    </div>
-    
-      <a href="https://jacklyli.github.io//post/he-he-hua-hua">
-        <div class="feature-container" style="background-image: url('https://jacklyli.github.io//post-images/he-he-hua-hua.png')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
+      </di>
+    </article>
+  
+    <article class="post">
       <a href="https://jacklyli.github.io//post/xiao-bai-de-di-yi-pian">
         <h2 class="post-title">小白的第一篇</h2>
       </a>
+      <div class="post-info">
+        <time class="post-time">
+          · 2019-02-09 ·
+        </time>
+        
+      </div>
+      
+        <a href="https://jacklyli.github.io//post/xiao-bai-de-di-yi-pian" class="post-feature-image" style="background-image: url('https://jacklyli.github.io//post-images/xiao-bai-de-di-yi-pian.jpg')">
+        </a>
+      
       <div class="post-abstract">
         
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-02-19</span>
-        
-      </div>
-    </div>
-    
-      <a href="https://jacklyli.github.io//post/xiao-bai-de-di-yi-pian">
-        <div class="feature-container" style="background-image: url('https://jacklyli.github.io//post-images/xiao-bai-de-di-yi-pian.JPG')">
-        </div>
-      </a>
-    
-  </section>
+      </di>
+    </article>
+  
+</div>
 
-
-<div class="pagination-container">
+    
+        <div class="pagination-container">
   
   
 </div>
 
-
-      </div>
-
-      <div class="site-footer">
-  <div class="slogan">自己的心情记录</div>
+    
+        <div class="site-footer">
   Powered by Hve Notes
 </div>
 
-
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+<script>
+  hljs.initHighlightingOnLoad()
 </script>
 
-
-
-
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,236 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>常用的数据处理函数 | Jacklyli </title>
+<link rel="shortcut icon" href="https://jacklyli.github.io//favicon.ico">
+<link rel="stylesheet" href="https://jacklyli.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://jacklyli.github.io/">
+  <img class="avatar" src="https://jacklyli.github.io//images/avatar.png" alt="" width="80px" height="80px">
+  </a>
+  <h1 class="site-title">
+    Jacklyli 
+  </h1>
+  <p class="site-description">
+    自己的心情记录
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://jacklyli.github.io/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://jacklyli.github.io//archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="https://jacklyli.github.io//tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="https://jacklyli.github.io//post/xiao-bai-de-di-yi-pian/" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              常用的数据处理函数
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-02-15 ·
+              </time>
+              
+            </div>
+            <div class="post-content">
+              <p>[TOC]</p>
+<h2 id="-">常用的数据处理函数</h2>
+<h3 id="-">* 删除字符串中多余的空格</h3>
+<pre><code>filename = &#39;budget.csv    &#39;
+filename = filename.strip()</code></pre><p>这样就可以删除掉了所有的空格；</p>
+<h3 id="-">* 将变量转换为大写字母</h3>
+<pre><code>filename = &#39;budget.cvs&#39;
+filename = filename.upper()</code></pre><p>这输出的结果就是：BUDGET.CSV</p>
+<h3 id="-">* 像列表中添加元素</h3>
+<pre><code>dog_names = [ ]
+dog_names.append(&#39;Joker&#39;)</code></pre><p>列表将会包含这个元素：[&#39;Joker&#39;]</p>
+<h3 id="-">* 列表中删除元素</h3>
+<pre><code>dog_names=[&#39;Joker&#39;,&#39;Ellia&#39;]
+dog_names.remove(&#39;Ellia&#39;)</code></pre><p>这样就删除了dog_names中的 Ellia 这个元素！</p>
+<h3 id="-type-">* type 函数返回对象的属性</h3>
+<pre><code>type(&#39;20011&#39;)  #返回str
+type(&#39;20011)  #返回int</code></pre><h3 id="-split-">* split函数分割字符</h3>
+<pre><code>&#39; cat,dog,horse&#39;.split(&#39;,&#39;) #split中的&#39;,&#39;是告诉split 用什么样的方式来分割函数
+[&#39;cat&#39;,&#39;dog&#39;,&#39;horse&#39;]</code></pre><h3 id="-">* 切片和索引小知识</h3>
+<p>python 的索引标号是从0 开始的；所以如果你想提取第二个元素，可以用：<code>x[1]</code>来实现；<br>切片（slicing)切片的操作从第一个数字开始，第二个数字的意思是”直到这里为止，但是包括我“<br>例子：</p>
+<pre><code>索引：
+x = [&#39;cat&#39;,&#39;dog&#39;,&#39;fish&#39;,&#39;monkey&#39;,&#39;snake&#39;]
+&gt;&gt;&gt;x[1]
+&#39;dog&#39;
+&gt;&gt;&gt;x[-2]
+&#39;monkey&#39;
+切片：
+&gt;&gt;&gt;x[2:]
+[&#39;fish&#39;,&#39;monkey&#39;,&#39;snake&#39;]
+&gt;&gt;&gt;x[-2:]
+[&#39;monkey&#39;,&#39;snake&#39;]
+&gt;&gt;&gt;x[:2]
+[&#39;cat&#39;,&#39;dog&#39;]</code></pre><h3 id="-range-xrange-">* range 和 xrange 的区别</h3>
+<p>在Python3中；range 集成了Python2中xrange的功能；range(5)生成的也是对象；不是之前的列表了；如果需要以列表形式输出话需要：</p>
+<pre><code>&gt;&gt;&gt;list(range(5))
+ [0, 1, 2, 3, 4]</code></pre><p>这样就可以了！</p>
+<h3 id="-zip-">* zip()函数</h3>
+<p>注意zip()函数在python3中返回的是对象；如果需要转换成列表的话用<code>list()</code>函数，在Python2中是列表；<br>举例：</p>
+<pre><code>x=[1,2,3,5]
+y=[5,6,7,8]
+result = []
+result = list(zip(x,y))
+print(result)</code></pre><p>输出结果<code>[(1, 5), (2, 6), (3, 7), (5, 8)]</code></p>
+<h3 id="-enumerate-">* enumerate()函数</h3>
+<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标<br>举例：</p>
+<pre><code class="language-`">seasons = [&#39;Spring&#39;, &#39;Summer&#39;, &#39;Fall&#39;, &#39;Winter&#39;]
+for i,d in enumerate(seasons):
+    print(i,d)    
+result = enumerate(seasons)
+print(result)</code></pre>
+<p>输出结果：</p>
+<pre><code>0 Spring
+1 Summer
+2 Fall
+3 Winter
+&lt;enumerate object at 0x0000028714BFBAF8&gt;</code></pre><p>如果要访问<code>result = enumerate(seasons)</code>就需要用list将其改变成列表；<br>enunerate函数也可以标明下标：<code>enumerate(seasons, start=1)</code> 就可以注明从哪里开始！</p>
+<p><em>书中有一段是利用索引删除某些不用的行的方式；这里仿写一个小的例子方便理解：</em></p>
+<pre><code>seasons = [&#39;Spring&#39;, &#39;Summer&#39;, &#39;Fall&#39;, &#39;Winter&#39;]
+x = [0,3]
+result = []
+for i,d in enumerate(seasons):
+    if i not in x:
+        result.append(d)
+print(result)</code></pre><p>输出结果：</p>
+<pre><code>[&#39;Summer&#39;, &#39;Fall&#39;]</code></pre><p>这样就成功将x中的索引数字剔除掉了，然后将1,2，的索引值保存在result中！</p>
+<h3 id="-">* 格式化输出</h3>
+<p>利用format 函数来实现字典的格式化输出；</p>
+<pre><code>example_dict = {
+    &#39;float_number&#39;:1324.421213434,
+    &#39;very_large_interger&#39;: 4859332490294023,
+    &#39;percentage&#39;:.234,
+}
+
+string_to_print = &quot;浮点数:{float_number:.4f}\n&quot;
+string_to_print += &quot;整数:{very_large_interger:,}\n&quot;
+string_to_print += &quot;百分数:{percentage:.2%}&quot;
+
+print(string_to_print.format(**example_dict))</code></pre><p>输出结果：</p>
+<pre><code>浮点数:1324.4212
+整数:4,859,332,490,294,023
+百分数:23.40%</code></pre><p>可以看出这个结果是我们想要的；这里有个需要注意的函数：** 将字典拆包（unpack)，拆包后的键和值传递给format;<br>再看一个列子：</p>
+<pre><code>seasons = [&#39;Spring&#39;, &#39;Summer&#39;, &#39;Fall&#39;, &#39;Winter&#39;]
+seasons_ch =[&#39;春天&#39;,&#39;夏天&#39;,&#39;秋天&#39;,&#39;冬天&#39;]
+for i in seasons:
+    print(&#39;英文季节：{}\n&#39;.format(i))
+print(&#39;中文季节：{[0]}\n&#39;.format(seasons_ch[2]))</code></pre><p>输出结果：</p>
+<pre><code>英文季节：Spring
+
+英文季节：Summer
+
+英文季节：Fall
+
+英文季节：Winter
+
+中文季节：秋</code></pre><p>这里有有个比较有趣的地方在<code>print(&#39;中文季节：{[0]}\n&#39;.format(seasons_ch[2]))</code>通过在<code>{}</code>里面加入<code>[0]</code>就可以选择需要输出的值！这点很有用，在书本里面也有使用！这个是之前没有注意的地方！</p>
+<h3 id="-strftime-">* strftime()函数</h3>
+<pre><code>import time
+t = (2009, 2, 17, 17, 3, 38, 1, 48, 0)
+t = time.mktime(t)
+print(time.strftime(&#39;%b %d %y %H : %M : %S:%A&#39;,time.gmtime(t))) </code></pre><p>输出结果：</p>
+<pre><code>Feb 17 09 09 : 03 : 38:Tuesday</code></pre><p>这个函数有很多的指令；可以从网上查得！</p>
+<h3 id="-strptime-">* strptime()函数</h3>
+<pre><code>import time
+struct_time = time.strptime(&quot;30 Nov 00&quot;, &quot;%d %b %y&quot;)
+print(&quot;returned tuple: %s&quot;,list(struct_time))</code></pre><p>输出结果：</p>
+<pre><code>returned tuple: %s [2000, 11, 30, 0, 0, 0, 3, 335, -1]</code></pre><p>这两个函数恰好相反；一个是将数字转换为日期格式；一个是将日期格式转化为数字！在处理日期格式的数字的时候会用过的上的。<br>举例：</p>
+<pre><code>start_string =&#39;{}/{}/{} {}:{}&#39;.format(&#39;2019&#39;,&#39;2&#39;,&#39;16&#39;,&#39;15&#39;,&#39;57&#39;)
+print(start_string)</code></pre><p>输出结果；</p>
+<pre><code>2019/2/16 15:5</code></pre><p>列子：</p>
+<pre><code>from datetime import datetime
+start_string =&#39;{}/{}/{} {}:{}&#39;.format(&#39;2019&#39;,&#39;2&#39;,&#39;16&#39;,&#39;15&#39;,&#39;57&#39;)
+print(start_string)
+start_time = datetime.strptime(start_string,&#39;%Y/%m/%d %H:%M&#39;)
+print(start_time)</code></pre><p>输出结果：</p>
+<pre><code>2019/2/16 15:57
+2019-02-16 15:57:00</code></pre><h3 id="-set-">* set()子集函数</h3>
+<pre><code>data_list =[1,5,6,2,5,6,8,3,8,3,3,7,9]
+result_set = set(data_list)
+print(result_set)</code></pre><p>结果输出：</p>
+<pre><code>{1, 2, 3, 5, 6, 7, 8, 9}</code></pre><p>还有几种集合的求法函数：</p>
+<pre><code>first_set = set([1,5,6,2,5,6,8,3,8,3,3,7,9])
+second_set = set([4,9,453,0,989,88])
+
+print(first_set.intersection(second_set))#求交集
+print(first_set.union(second_set))#合并集合
+print(first_set.difference(second_set))#求差集
+print(second_set-first_set)#求差集；这两个操作中顺序很重要；</code></pre><p>输出结果：</p>
+<pre><code>{9}
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 453, 88, 989}
+{1, 2, 3, 5, 6, 7, 8}
+{0, 4, 453, 88, 989}</code></pre><h3 id="-">* 用子集求最大值；</h3>
+<pre><code>import numpy as np
+list_with_dups = [1,5,6,2,5999,6,8,3,8,3,3,7,9]
+#print(np.unique(list_with_dups,return_index = True))
+# max_result = np.unique(list_with_dups)
+max_result = list(set(list_with_dups))#用set同样可以得出子集然后得到最大值
+print(max_result[-1])</code></pre><p>返回值为：<code>5999</code></p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://jacklyli.github.io//post/he-he-hua-hua">
+              <h3 class="post-title">
+                和和画画
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Powered by Hve Notes
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
